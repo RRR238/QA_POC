@@ -1,38 +1,80 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  font-family: Arial, sans-serif;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.chat-window {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 500px;
+  height: 570px;
+  max-height: 570px;
+  overflow-y: auto;
+  background-color: #f7f7f7;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.user {
+  background-color: #3498db;
   color: white;
+  text-align: right;
 }
 
-.App-link {
-  color: #61dafb;
+.chatbot {
+  background-color: #e1e1e1;
+  color: #333;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-input {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 700px; /* Reduce the width */
+  height: 70px;
+  max-height: 100px; /* Increase the maximum height */
+  overflow-y: auto; /* Add scrollbar for overflow */
+}
+
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Allow textarea to take the full width */
+  max-height: 100px; /* Increase the maximum height */
+  overflow-y: scroll; /* Add scrollbar for overflow */
+  resize: none; /* Disable textarea resizing */
+  display: block; /* Display textarea as a block element */
+  margin-right: 10px; /* Add some spacing to the right */
+  font-family: inherit; /* Use the same font as the chat messages */
+}
+
+input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3181c6;
 }
